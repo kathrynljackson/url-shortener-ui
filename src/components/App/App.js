@@ -8,11 +8,13 @@ export class App extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      urls: []
+      urls: [],
     }
   }
 
-  componentDidMount() {
+  async componentDidMount() {
+    let stuff = await getUrls()
+    this.setState({ urls: stuff.urls })
   }
 
   render() {
