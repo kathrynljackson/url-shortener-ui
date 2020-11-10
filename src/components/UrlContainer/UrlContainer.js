@@ -4,11 +4,8 @@ import './UrlContainer.css';
 
 const UrlContainer = props => {
   const urlEls = props.urls.map(url => {
-    console.log(url.urls)
-   
     return (
-      
-      <div className="url">
+            <div key={url.title} className="url">
         <p>{url.url}</p>
         <h3>{url.title}</h3>
         <a href={url.short_url} target="blank">{url.short_url}</a>

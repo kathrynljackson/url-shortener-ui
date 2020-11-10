@@ -13,8 +13,8 @@ export class App extends Component {
   }
 
   async componentDidMount() {
-    let stuff = await getUrls()
-    this.setState({ urls: stuff.urls })
+    let importedData = await getUrls()
+    this.setState({ urls: importedData.urls })
   }
 
   render() {
